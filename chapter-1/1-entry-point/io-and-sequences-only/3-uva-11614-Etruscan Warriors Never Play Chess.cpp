@@ -9,26 +9,22 @@ int main() {
   cin >> t;
 
   while (t--) {
-    int w;
-    long long row =0, currW = 0;
+    long long n;
+    cin >> n;
 
-    cin >> w;
+    long long lo = 0, hi = 2000000000LL;
+    long long ans = 0;
 
-    for (int i = 0; i < w; i++) {
-      for (int j = 0; j <= i; j++) {
-        currW++;
+    while (lo <= hi) {
+      long long mid = (lo + hi) / 2;
+      long long need = mid * (mid + 1) / 2;
 
-        if (currW == w) {
-          if (j == i) row++;
-
-          printf("%lld\n", row);
-          break;
-        }
-      }
-      
-      row++;
-
-      if (currW == w) break;
+      if (need <= n) {
+        ans = mid;
+        lo = mid + 1;
+      } else hi = mid - 1;
     }
+
+    cout << ans << endl;
   }
 }
