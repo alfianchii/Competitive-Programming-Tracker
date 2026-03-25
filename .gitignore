@@ -1,1 +1,4 @@
 main*
+*.prob
+*.bin
+.cph
