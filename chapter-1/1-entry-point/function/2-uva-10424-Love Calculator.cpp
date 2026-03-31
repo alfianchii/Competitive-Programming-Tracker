@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int getDigitRoot(int num) {
+  if (num < 10) return num;
+
+  int sum = 0;
+  while (num > 0) {
+    sum += num % 10;
+    num /= 10;
+  }
+
+  return getDigitRoot(sum);
+}
+
+int getValue(string name) {
+  int sum = 0;
+  
+  for (int c : name) {
+    c = tolower(c);
+    if (c >= 'a' && c <= 'z') sum += (c - 'a') + 1;
+    else continue;
+  }
+
+  return getDigitRoot(sum);
+}
+
+int main() {
+  string name1, name2;
+
+  while(getline(cin, name1), getline(cin, name2)) {
+    int value1 = getValue(name1);
+    int value2 = getValue(name2);
+
+    double hi = max(value1, value2);
+    double lo = min(value1, value2);
+
+    cout << fixed << setprecision(2) << (lo / hi) * 100 << " %\n";
+  }
+}
