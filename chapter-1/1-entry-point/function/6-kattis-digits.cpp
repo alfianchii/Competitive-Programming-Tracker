@@ -2,24 +2,20 @@
 
 using namespace std;
 
-int getDigit(long long num, int loop = 1) {
-  if (num == 1) return loop++;
-
-  int digit = 0;
-  while (num != 0) {
-    num /= 10;
-    digit++;
-  }
-  loop++;
-
-  return getDigit(digit, loop);
-}
-
 int main() {
-  long long x;
+  string num;
 
-  while (cin >> x) {
-    int res = getDigit(x);
-    cout << res << "\n";
+  while (cin >> num && num != "END") {
+    string prev = num;
+    string curr = to_string(num.length());
+    int counter = 1;
+
+    while (curr != prev) {
+      prev = curr;
+      curr = to_string(prev.length());
+      counter++;
+    }
+
+    cout << counter << "\n";
   }
 }
