@@ -18,8 +18,8 @@ int getValue(string name) {
   int sum = 0;
   
   for (int c : name) {
+    c = tolower(c);
     if (c >= 97 && c <= 122) sum += (c - 97) + 1;
-    else if (c >= 65 && c <= 90) sum += (c - 65) + 1;
     else continue;
   }
 
