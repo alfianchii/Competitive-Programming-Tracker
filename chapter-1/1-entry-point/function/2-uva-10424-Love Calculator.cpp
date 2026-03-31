@@ -19,7 +19,7 @@ int getValue(string name) {
   
   for (int c : name) {
     c = tolower(c);
-    if (c >= 97 && c <= 122) sum += (c - 97) + 1;
+    if (c >= 'a' && c <= 'z') sum += (c - 'a') + 1;
     else continue;
   }
 
