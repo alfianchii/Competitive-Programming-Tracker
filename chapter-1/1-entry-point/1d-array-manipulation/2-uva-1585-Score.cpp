@@ -6,17 +6,18 @@ int main() {
   int tcs; cin >> tcs;
 
   while (tcs--) {
-    int lastScore = 0, sumScore = 0;
     string score; cin >> score;
+    int len = score.length();
+    int points[len];
+    memset(points, 0, sizeof(points));
 
-    for (char s : score) {
-      if (s == 'O') {
-        lastScore++;
-        sumScore += lastScore;
+    int sum = 0;
+    for (int i = 0; i < len; i++) {
+      if (score[i] == 'O') {
+        if (i == 0) points[i] = 1;
+        else  points[i] = points[i - 1] + 1;
+        sum += points[i];
       }
-      else if (s == 'X') lastScore = 0;
     }
-
-    cout << sumScore << "\n";
   }
 }
