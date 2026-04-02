@@ -11,12 +11,9 @@ int main() {
 
   while (time != -1) {
     if (verdict == "right") {
-      score += time; ac++;
-
-      if (wrongAnswers[letter - 'A'] > 0) {
-        score += 20 * wrongAnswers[letter - 'A'];
-        wrongAnswers[letter - 'A'] = 0;
-      }
+      ac++;
+      score += time;
+      score += 20 * wrongAnswers[letter - 'A'];
     } else wrongAnswers[letter - 'A']++;
 
     cin >> time >> letter >> verdict;
