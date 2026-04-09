@@ -13,7 +13,8 @@ int main() {
     else if (arr[0] == arr[1]) cout << "Equal\n";
     else if (arr[0] < arr[1]) cout << "Smaller\n";
   } else if (t == 3) {
-    sort(arr.begin(), arr.end());
+    vector<int> temp = {arr[0], arr[1], arr[2]};
+    sort(temp.begin(), temp.end());
     cout << arr[1] << "\n";
   } else if (t == 4) {
     int sum = 0;
