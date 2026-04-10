@@ -23,7 +23,7 @@ int main() {
     oneToZero -= swapPairs;
 
     int questionForSwap = min(oneToZero, questionToOne);
-    moves += questionForSwap;
+    moves += 2 * questionForSwap;
     oneToZero -= questionForSwap;
     questionToOne -= questionForSwap;
 
