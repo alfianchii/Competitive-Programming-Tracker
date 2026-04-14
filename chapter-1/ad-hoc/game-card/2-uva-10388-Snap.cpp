@@ -17,16 +17,12 @@ int main() {
 
     for (int i = 0; i < 1000; i++) {
       if (janeDown.empty()) {
-        while (!janeUp.empty()) {
-          janeDown.push_front(janeUp.front());
-          janeUp.pop_front();
-        }
+        for (char card : janeUp) janeDown.push_front(card);
+        janeUp.clear();
       }
       if (johnDown.empty()) {
-        while (!johnUp.empty()) {
-          johnDown.push_front(johnUp.front());
-          johnUp.pop_front();
-        }
+        for (char card : johnUp) johnDown.push_front(card);
+        johnUp.clear();
       }
 
       char janeCard = janeDown.front(); janeDown.pop_front();
