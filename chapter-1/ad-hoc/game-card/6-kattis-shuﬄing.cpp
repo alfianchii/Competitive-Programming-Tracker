@@ -16,8 +16,8 @@ int main() {
     if (slot % 2 == 0) {
       vector<int> left(div), right(div);
       for (int i = 0; i < div; i++) left[i] = tempDeck[i];
-      for (int i = div; i < slot; i++) right[i - div] = tempDeck[i];
-      
+      for (int i = 0; i < div; i++) right[i] = tempDeck[i + div];
+
       int idx = 0;
       if (act == "out") {
         for (int i = 0; i < div; i++) {
@@ -36,7 +36,7 @@ int main() {
 
         vector<int> left(leftDiv), right(rightDiv);
         for (int i = 0; i < leftDiv; i++) left[i] = tempDeck[i];
-        for (int i = rightDiv + 1; i < slot; i++) right[i - rightDiv - 1] = tempDeck[i];
+        for (int i = 0; i < rightDiv; i++) right[i] = tempDeck[i + leftDiv];
 
         int idx = 0;
         for (int i = 0; i < rightDiv; i++) {
@@ -50,10 +50,10 @@ int main() {
 
         vector<int> left(leftDiv), right(rightDiv);
         for (int i = 0; i < leftDiv; i++) left[i] = tempDeck[i];
-        for (int i = rightDiv; i < slot; i++) right[i - rightDiv - 1] = tempDeck[i];
+        for (int i = 0; i < rightDiv; i++) right[i] = tempDeck[i + leftDiv];
 
         int idx = 0;
-        for (int i = 0; i < rightDiv; i++) {
+        for (int i = 0; i < leftDiv; i++) {
           tempDeck[idx++] = right[i];
           tempDeck[idx++] = left[i];
         }
