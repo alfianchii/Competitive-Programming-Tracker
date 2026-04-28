@@ -10,6 +10,7 @@ int main() {
     vector<string> field(n);
     for (int i = 0; i < n; i++) cin >> field[i];
 
+    if (tcs > 1) cout << "\n";
     cout << "Field #" << tcs << ":\n";
 
     for (int row = 0; row < n; row++) {
