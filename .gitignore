@@ -2,3 +2,4 @@ main*
 *.prob
 *.bin
 .cph
+.DS_Store
