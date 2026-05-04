@@ -1,4 +1,5 @@
-main*
+main.cpp
+main
 *.prob
 *.bin
 .cph
