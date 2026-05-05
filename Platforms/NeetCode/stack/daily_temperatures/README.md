@@ -29,20 +29,21 @@ Output: [0,0,0]
 
 ## Brute Force Intuition
 
-?
+For every day, check all future days one by one until I find a warmer temperature. If a warmer temperature is found, store the distance between the current day and that warmer day. If no warmer day exists, keep the result as `0`. This works, but it repeats too much work because each day may scan many future days (tho this is not a stack).
 
-- Time Complexity: `O(?)`
-- Space Complexity: `O(?)`
+- Time Complexity: `O(n^2)`
+- Space Complexity: `O(n)`
 
-## OK (?)
+## OK (Monotonic Stack)
 
-?
+Use a stack to store indexes of days that still have not found a warmer future temperature. The stack does not store the temperature directly. It stores the index, because I need the index difference to calculate the number of waiting days. When reading the array from left to right, create a result slice filled with `0`, and use a stack to store unresolved indexes.
 
 ## Complexity Analysis
 
-- Time Complexity: `O(?)`
-- Space Complexity: `O(?)`
+- Time Complexity: `O(n)`
+- Space Complexity: `O(n)`
 
 ## Edge Cases
 
-- ?
+- Temperatures are strictly increasing/decreasing
+- All temperatures are the same
