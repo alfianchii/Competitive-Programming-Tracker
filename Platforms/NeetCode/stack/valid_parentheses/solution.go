@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func IsValid(s string) bool {
 	stack := []rune{}

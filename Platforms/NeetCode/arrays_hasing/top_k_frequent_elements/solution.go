@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func TopKFrequent(nums []int, k int) []int {
 	count := make(map[int]int)

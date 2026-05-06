@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 type entry struct {
 	key   int

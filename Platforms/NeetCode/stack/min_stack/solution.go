@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 type MinStack struct {
 	stack    []int

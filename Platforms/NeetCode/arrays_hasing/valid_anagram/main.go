@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func main() {
 	s := "racecar"

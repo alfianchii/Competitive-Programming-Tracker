@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func TwoSum(nums []int, target int) []int {
 	seen := make(map[int]int)

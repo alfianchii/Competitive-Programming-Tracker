@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func IsValidSudoku(board [][]byte) bool {
 	rows := make([]map[byte]bool, 9)
