@@ -42,7 +42,7 @@ func EvalRPN(tokens []string) int {
 			stack.Pop()
 
 			res := 0
-			for !stack.IsEmpty() {
+			for range 1 {
 				left, _ := strconv.Atoi(stack.Top())
 				if token == "+" {
 					res = left + right
