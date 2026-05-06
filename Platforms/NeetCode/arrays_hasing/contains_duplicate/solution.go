@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func HasDuplicate(nums []int) bool {
 	freq := make(map[int]int)

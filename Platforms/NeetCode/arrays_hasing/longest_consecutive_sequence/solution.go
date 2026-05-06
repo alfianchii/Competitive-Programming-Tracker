@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func LongestConsecutive(nums []int) int {
 	freq := make(map[int]bool)

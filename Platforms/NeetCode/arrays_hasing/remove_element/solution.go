@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func RemoveElement(nums []int, val int) int {
 	k := 0
