@@ -8,8 +8,8 @@ int main() {
 
   double res = 0;
   int mid = nums.size() / 2;
-  if (mid % 2 == 1) res = (nums[mid] + nums[mid + 1]) / 2;
+  if (n % 2 == 0) res = (nums[mid - 1] + nums[mid]) / 2;
   else res = nums[mid];
 
-  cout << res << "\n";
+  cout << fixed << setprecision(1) << res << "\n";
 }
