@@ -1,10 +1,10 @@
 package main
 
 type Stack struct {
-	data []int
+	data []float64
 }
 
-func (this *Stack) Push(val int) {
+func (this *Stack) Push(val float64) {
 	this.data = append(this.data, val)
 }
 
@@ -12,7 +12,7 @@ func (this *Stack) Pop() {
 	this.data = this.data[:len(this.data)-1]
 }
 
-func (this *Stack) Top() int {
+func (this *Stack) Top() float64 {
 	return this.data[len(this.data)-1]
 }
 
@@ -45,9 +45,9 @@ func CarFleet(target int, positions []int, speeds []int) int {
 
 	carFleet := 0
 	for i := range length {
-		time := (target - positions[i]) / speeds[i]
+		time := float64(target-positions[i]) / float64(speeds[i])
 
-		if timeFleets.IsEmpty() || timeFleets.Top() != time {
+		if timeFleets.IsEmpty() || time > timeFleets.Top() {
 			timeFleets.Push(time)
 			carFleet++
 		}
