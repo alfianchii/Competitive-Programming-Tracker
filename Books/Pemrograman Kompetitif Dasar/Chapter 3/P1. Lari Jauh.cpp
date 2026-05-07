@@ -5,9 +5,7 @@ using namespace std;
 int countCheckpoint(int duck, vector<int>& checkpoints) {
   int left = 0, right = checkpoints.size();
 
-  // 0 < 1
   while (left < right) {
-    // 1
     int mid = (left + right) / 2;
     if (checkpoints[mid] <= duck) left = mid + 1;
     else right = mid;
@@ -18,7 +16,7 @@ int countCheckpoint(int duck, vector<int>& checkpoints) {
 
 int main() {
   int n, k; cin >> n >> k;
-  vector<int> checkpoints(n), ducks(n);
+  vector<int> checkpoints(n), ducks(k);
   for (int i = 0; i < n; i++) cin >> checkpoints[i];
   for (int i = 0; i < k; i++) cin >> ducks[i];
 
