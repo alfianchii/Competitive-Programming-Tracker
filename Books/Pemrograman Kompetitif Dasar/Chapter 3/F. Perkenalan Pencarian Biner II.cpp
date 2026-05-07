@@ -7,7 +7,7 @@ int findAnimalType(int x, vector<int>& types) {
 
   while (left < right) {
     int mid = (left + right) / 2;
-    if (x >= types[mid]) left = mid + 1;
+    if (x > types[mid]) left = mid + 1;
     else right = mid;
   }
 
