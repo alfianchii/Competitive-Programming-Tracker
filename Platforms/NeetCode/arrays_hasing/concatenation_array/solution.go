@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func GetConcatenation(nums []int) []int {
 	numsLength := len(nums)

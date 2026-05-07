@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func GroupAnagrams(strs []string) [][]string {
 	groups := make(map[[26]int][]string)

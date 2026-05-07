@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func MajorityElement(nums []int) int {
 	freq := make(map[int]int)

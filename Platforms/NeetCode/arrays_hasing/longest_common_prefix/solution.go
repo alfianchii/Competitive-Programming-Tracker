@@ -1,4 +1,4 @@
-package NeetCode
+package main
 
 func LongestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
