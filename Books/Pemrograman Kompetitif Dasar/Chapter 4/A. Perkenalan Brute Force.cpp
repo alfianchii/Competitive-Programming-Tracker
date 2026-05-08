@@ -7,9 +7,8 @@ int main() {
   int miss = 0;
 
   for (int i = 0; i < a.size(); i++) {
-    if (a[i] != b[i]) {
+    if (a[i + miss] != b[i]) {
       miss++;
-      a.erase(i, 1);
     }
   }
 
