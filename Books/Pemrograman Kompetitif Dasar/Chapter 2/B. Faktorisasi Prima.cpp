@@ -6,25 +6,20 @@ int main() {
   int n; cin >> n;
   vector<pair<int, int>> nums;
 
-  int pangkat = 0;
   int temp = n;
-  for (int prima = 2; prima <= n; prima++) {
-    if (temp % prima == 0) {
-      temp = temp / prima;
-      pangkat++;
-      prima--;
-    } else {
-      nums.push_back({prima, pangkat});
+  for (int prima = 2; temp > 1; prima++) {
+    int pangkat = 0;
 
-      pangkat = 0;
-      continue;
+    while (temp % prima == 0) {
+      temp /= prima;
+      pangkat++;
     }
+
+    if (pangkat > 0) nums.push_back({prima, pangkat});
   }
 
   bool first = true;
   for (auto num : nums) {
-    if (!num.second) continue;
-
     if (!first) cout << " x ";
     first = false;
 
