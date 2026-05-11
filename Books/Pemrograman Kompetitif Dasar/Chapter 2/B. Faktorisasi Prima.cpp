@@ -8,7 +8,7 @@ int main() {
 
   int pangkat = 0;
   int temp = n;
-  for (int prima = 2; prima < n; prima++) {
+  for (int prima = 2; prima <= n; prima++) {
     if (temp % prima == 0) {
       temp = temp / prima;
       pangkat++;
