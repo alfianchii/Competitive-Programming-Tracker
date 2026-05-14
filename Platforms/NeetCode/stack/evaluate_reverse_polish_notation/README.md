@@ -1,4 +1,4 @@
-# [Evaluate Reverse Polish Notation](https://neetcode.io/problems/evaluate-reverse-polish-notation/question?list=neetcode150)
+# [Evaluate Reverse Polish Notation](https://neetcode.io/problems/evaluate-reverse-polish-notation)
 
 ## Problem
 
@@ -27,17 +27,17 @@ Explanation: ((1 + 2) * 3) - 4 = 5
 
 ## Brute Force Intuition
 
-?
+N/A
 
-## OK (?)
+## OK (Stack)
 
-?
+Use a stack to store numbers that are waiting to be used. When reading the tokens from left to right, if the token is a number, convert it to integer and push it into the stack. If the token is an operator, pop two numbers from the stack. The first popped number is the `right` operand and the second popped number is the `left` operand. Evaluate `left operator right`. Push the result back into the stack.
 
 ## Complexity Analysis
 
-- Time Complexity: `O(?)`
-- Space Complexity: `O(?)`
+- Time Complexity: `O(n)`
+- Space Complexity: `O(n)`
 
 ## Edge Cases
 
-- ?
+- Three or more numbers before an operator, for example `["1","2","3","+","*"]`
